@@ -11,7 +11,7 @@
 body{
     padding: 0;
     margin: 0;
-    background: radial-gradient(circle, rgba(4,76,236,1) 0%, rgba(59,255,23,1) 100%);
+    background: linear-gradient(90deg, rgba(4,236,233,1) 0%, rgba(23,255,147,1) 100%);
 }
 
 .calculator-grid{
