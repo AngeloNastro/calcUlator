@@ -104,30 +104,31 @@ class Calculator {
   const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
   
   numberButtons.forEach(button => {
-    button.addEventListener('click touch', () => {
+    button.addEventListener('click touchstart', (e) => {
+      console.log('event, e);
       calculator.appendNumber(button.innerText)
       calculator.updateDisplay()
     })
   })
   
   operationButtons.forEach(button => {
-    button.addEventListener('click touch', () => {
+    button.addEventListener('click touchstart', () => {
       calculator.chooseOperation(button.innerText)
       calculator.updateDisplay()
     })
   })
   
-  equalsButton.addEventListener('click touch', button => {
+  equalsButton.addEventListener('click touchstart', button => {
     calculator.compute()
     calculator.updateDisplay()
   })
   
-  allClearButton.addEventListener('click touch', button => {
+  allClearButton.addEventListener('click touchstart', button => {
     calculator.clear()
     calculator.updateDisplay()
   })
   
-  deleteButton.addEventListener('click touch', button => {
+  deleteButton.addEventListener('click touchstart', button => {
     calculator.delete()
     calculator.updateDisplay()
   })
